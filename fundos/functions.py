@@ -30,22 +30,25 @@ def fix_df(df):
 
 
 
-def filtra_ordena(df):
+def ordena(df_filtrado):
 
     #PARAMETROS
 
-    liq_med_diaria = 200000
-    patrimonio = 1000000000
-    pvp = 0.8
+    # liq_med_diaria = 200000
+    # patrimonio = 1000000000
+    # pvp = 0.8
 
     mostrar = ['TICKER', 'PRECO', 'ULTIMO DIVIDENDO', 'DY', 'VALOR PATRIMONIAL COTA', 'P/VP']
 
-    #filtrando em um novo data frame baseado nos parametros
-    df_filtrado = df[ (df['LIQUIDEZ MEDIA DIARIA'] >= liq_med_diaria) & (df['PATRIMONIO'] >= patrimonio) & (df['P/VP'] >= pvp) ].sort_values(by='P/VP')
-
-    df_res1 = df_filtrado.sort_values(by=['DY', 'P/VP'], ascending=[True, False]).head(5)
-    df_res2 = df_filtrado.sort_values(by=['P/VP', 'DY'], ascending=[True, False]).head(5)
+    df_res1 = df_filtrado.sort_values(by=['DY', 'P/VP'], ascending=[True, False]).head(10)
+    df_res2 = df_filtrado.sort_values(by=['P/VP', 'DY'], ascending=[True, False]).head(10)
 
     #tenho dois df para mostrar, duas possibilidades, por enquanto vou voltar apenas o 1
 
     return df_res1
+
+
+
+def filtra(df, liq_med_diaria, patrimonio, pvp):
+    
+    return df[ (df['LIQUIDEZ MEDIA DIARIA'] >= liq_med_diaria) & (df['PATRIMONIO'] >= patrimonio) & (df['P/VP'] >= pvp) ].sort_values(by='P/VP')
