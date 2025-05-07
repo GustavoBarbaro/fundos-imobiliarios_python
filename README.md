@@ -19,6 +19,11 @@ Este projeto foi desenvolvido com o objetivo de analisar e acompanhar Fundos Imo
 
 ---
 
+# Screenshot
+
+![image](https://github.com/user-attachments/assets/c3bbe2dd-bbcb-44a1-b974-0f21f485ef17)
+
+
 # Funcionalidades ⚙️
 
 * Busca automatizada de informações sobre FIIs.
