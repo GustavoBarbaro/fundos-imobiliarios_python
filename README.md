@@ -12,6 +12,8 @@ Este projeto foi desenvolvido com o objetivo de analisar e acompanhar Fundos Imo
 # Tecnologias Utilizadas 💻
 
 * Python
+* Selenium
+* Streamlit
 * Pandas
 * Numpy
 
@@ -53,7 +55,8 @@ pip install -r requirements.txt
 ## 3. Execute o script principal
 
 ```bash
-python main.py
+cd fundos/
+streamlit run app.py
 ```
 
 # Exemplo de Saída 📄
